@@ -12,7 +12,7 @@ public class P04_SumOfChars_01 {
 
         for (int i = 1; i <= n; i++) {
             char character = scanner.nextLine().charAt(0);
-            totalSum += character;
+            totalSum += character;                                       // (int) character
         }
 
         System.out.printf("The sum equals: %d", totalSum);

@@ -13,6 +13,7 @@ public class P03_Elevator_01 {
 
         System.out.printf("%.0f", totalCourses);
 
+//        // Alternative solution:
 //        int totalCourses = 0;
 //
 //        if (amountPeople % elevatorCapacity == 0) {

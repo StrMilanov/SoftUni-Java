@@ -10,8 +10,7 @@ public class P05_PrintPartOfASCIITable_01 {
         int endNum = Integer.parseInt(scanner.nextLine());
 
         for (int i = startNum; i <=endNum ; i++) {
-            String ch = Character.toString(i);
-            System.out.print(ch + " ");
+            System.out.print((char) i + " ");
         }
 
     }
