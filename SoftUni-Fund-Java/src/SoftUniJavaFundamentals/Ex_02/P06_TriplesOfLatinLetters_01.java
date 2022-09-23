@@ -9,18 +9,32 @@ public class P06_TriplesOfLatinLetters_01 {
         int n = Integer.parseInt(scanner.nextLine());
 
         for (int i = 1; i <= n; i++) {
-            String ch1 = Character.toString(96 + i);
+            int ch1 = 96 + i;
 
             for (int j = 1; j <= n; j++) {
-                String ch2 = Character.toString(96 + j);
+                int ch2 = 96 + j;
 
                 for (int k = 1; k <= n; k++) {
-                    String ch3 = Character.toString(96 + k);
-                    System.out.print(ch1 + ch2 + ch3);
-                    System.out.println();
+                    int ch3 = 96 + k;
+                    System.out.printf("%c%c%c\n", ch1, ch2, ch3);
                 }
             }
         }
+
+//        // Alternative solution:
+//        for (int i = 1; i <= n; i++) {
+//            String ch1 = Character.toString(96 + i);
+//
+//            for (int j = 1; j <= n; j++) {
+//                String ch2 = Character.toString(96 + j);
+//
+//                for (int k = 1; k <= n; k++) {
+//                    String ch3 = Character.toString(96 + k);
+//                    System.out.print(ch1 + ch2 + ch3);
+//                    System.out.println();
+//                }
+//            }
+//        }
 
     }
 }
