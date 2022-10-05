@@ -15,11 +15,7 @@ public class P07_CondenseArrayToNumber_01 {
         while (numsArr.length > 1) {
         int[] condArr = new int[numsArr.length - 1];
 
-            for (int i = 0; i <= numsArr.length - 1; i++) {
-                if (i == numsArr.length - 1) {
-                    break;
-                }
-
+            for (int i = 0; i < numsArr.length - 1; i++) {
                 int sum = numsArr[i] + numsArr[i + 1];
                 condArr[i] = sum;
             }
