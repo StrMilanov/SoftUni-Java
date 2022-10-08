@@ -1,5 +1,6 @@
 package SoftUniJavaFundamentals.Ex_03;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class P10_TreasureHunt_01 {
@@ -17,32 +18,27 @@ public class P10_TreasureHunt_01 {
 
             if (command.contains("Loot")) {
                 String[] newLootArray = command.split(" ");
-                String uniqueLoot = "";
-                for (int i = 1; i <= newLootArray.length - 1; i++) {
+                // Read looted items and compare
+                for (int i = 1; i < newLootArray.length; i++) {
                     boolean isContained = false;
-                    for (int j = 0; j <= chestArray.length - 1; j++) {
-                        if (newLootArray[i].equals(chestArray[j])) {
+                    for (int j = 0; j < chestArray.length; j++) {
+                        if (chestArray[j].equals(newLootArray[i])) {
                             isContained = true;
                             break;
                         }
                     }
+
+                    // Add new items to chest
                     if (!isContained) {
-                        uniqueLoot = newLootArray[i] + " " + uniqueLoot;
+                        String[] tempChestArray = new String[chestArray.length + 1];
+                        tempChestArray[0] = newLootArray[i];
+                        for (int k = 1; k < tempChestArray.length; k++) {
+                            tempChestArray[k] = chestArray[k - 1];
+                        }
+                        chestArray = tempChestArray;
                     }
+
                 }
-
-                String[] uniqueLootArray = uniqueLoot.split(" ");
-                chestArrayUpdate = new String[chestArrayUpdate.length + uniqueLootArray.length];
-
-                for (int i = 0; i <= uniqueLootArray.length - 1; i++) {
-                    chestArrayUpdate[i] = uniqueLootArray[i];
-                }
-                for (int j = uniqueLootArray.length; j <= chestArrayUpdate.length - 1; j++) {
-                    chestArrayUpdate[j] = chestArray[j - uniqueLootArray.length];
-                }
-
-                chestArray = chestArrayUpdate;
-
 //                System.out.println("Loot: " + Arrays.toString(chestArray));             // TEST PRINT
             }
 
@@ -90,6 +86,7 @@ public class P10_TreasureHunt_01 {
             command = scanner.nextLine();
         }
 
+        // PRINT Results
         if (isEmpty) {
             System.out.println("Failed treasure hunt.");
         } else {
