@@ -10,8 +10,6 @@ public class P01_TheBiscuitFactory {
         int productionPerWorkerPerDay = Integer.parseInt(scanner.nextLine());
         int workersCount = Integer.parseInt(scanner.nextLine());
         int competingProduction = Integer.parseInt(scanner.nextLine());
-        ;
-        System.out.println();
 
         int productionPerMonth = 0;
         for (int i = 1; i <= 30; i++) {
