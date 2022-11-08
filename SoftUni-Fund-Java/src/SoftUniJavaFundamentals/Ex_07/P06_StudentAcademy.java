@@ -21,11 +21,11 @@ public class P06_StudentAcademy {
         }
 
         for (var student : studentsMap.entrySet()) {
-            Double sumGrades = 0.0;
+            double sumGrades = 0.0;
             for (int i = 0; i < student.getValue().size(); i++) {
                 sumGrades += student.getValue().get(i);
             }
-            Double avgGrade = sumGrades / student.getValue().size();
+            double avgGrade = sumGrades / student.getValue().size();
 
             if (avgGrade >= 4.5) {
                 System.out.printf("%s -> %.2f\n", student.getKey(), avgGrade);
