@@ -59,11 +59,11 @@ public class P01_SecretChat {
 
         StringBuilder reversedSubstring = new StringBuilder();
         String[] charactersArr = string.split("");
-        for (String c : charactersArr) {
-            if (c.equals("?")) {
+        for (int i = charactersArr.length - 1; i >= 0; i--) {
+            if (charactersArr[i].equals("?")) {
                 reversedSubstring.append("\\?");
             } else {
-                reversedSubstring.append(c);
+                reversedSubstring.append(charactersArr[i]);
             }
         }
 
