@@ -24,13 +24,12 @@ public class P01_SecretChat {
                     String substringToReverse = command[1];
 
                     if (hiddenMessage.toString().contains(substringToReverse)) {
-                        String tempMessageReverse = hiddenMessage.toString().replaceFirst(substringToReverse, reverseString(substringToReverse));
+                        String tempMessageReverse = hiddenMessage.toString().replaceFirst(Pattern.quote(substringToReverse), reverseString(substringToReverse));
                         hiddenMessage.replace(0, hiddenMessage.length(), tempMessageReverse);
+                        System.out.println(hiddenMessage);
                     } else {
                         System.out.println("error");
                     }
-
-                    System.out.println(hiddenMessage);
                     break;
 
                 case "ChangeAll":
