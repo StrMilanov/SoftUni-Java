@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SoftUni-Basics-Java/SoftUni-Basics-Java.iml" filepath="$PROJECT_DIR$/SoftUni-Basics-Java/SoftUni-Basics-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SoftUni-Fund-Java/SoftUni-Fund-Java.iml" filepath="$PROJECT_DIR$/SoftUni-Fund-Java/SoftUni-Fund-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SoftUni-Java.iml" filepath="$PROJECT_DIR$/.idea/SoftUni-Java.iml" />
+    </modules>
+  </component>
+</project>
