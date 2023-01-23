@@ -2,7 +2,7 @@ package SoftUniJavaAdvanced.Ex_02;
 
 import java.util.Scanner;
 
-public class P08_TODO_TheHeiganDance {
+public class TODO_P08_TheHeiganDance {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
