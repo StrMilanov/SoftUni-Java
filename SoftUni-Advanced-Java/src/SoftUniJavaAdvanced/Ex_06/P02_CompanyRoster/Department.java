@@ -1,16 +1,20 @@
 package SoftUniJavaAdvanced.Ex_06.P02_CompanyRoster;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Department {
 
     private String departmentName;
-    private List<Employee> employeeList;
+    private Employee employee;
+    private List<Employee> departmentEmployeesList;
 
-    public Department(String departmentName, Employee employeeList) {
+    public Department(String departmentName, Employee employee) {
         this.departmentName = departmentName;
-        this.employeeList = new ArrayList<>();
+        this.employee = employee;
+        this.departmentEmployeesList = new ArrayList<>();
+        addEmployee(employee, departmentEmployeesList);
     }
 
     public String getDepartmentName() {
@@ -21,11 +25,20 @@ public class Department {
         this.departmentName = departmentName;
     }
 
-    public List<Employee> getEmployeeList() {
-        return employeeList;
+    public List<Employee> getDepartmentEmployeesList() {
+        return departmentEmployeesList;
     }
 
-    public void setEmployeeList(List<Employee> employeeList) {
-        this.employeeList = employeeList;
+    public void setDepartmentEmployeesList(List<Employee> departmentEmployeesList) {
+        this.departmentEmployeesList = departmentEmployeesList;
     }
+
+    private void addEmployee(Employee employee, List<Employee> list) {
+        list.add(employee);
+    }
+
+    public void sortEmployeeListDescending() {
+        departmentEmployeesList.sort(Comparator.comparing(Employee::getSalary).reversed());
+    }
+
 }
